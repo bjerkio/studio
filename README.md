@@ -1,2 +1,3 @@
 # studio
-[Internal] Sanity Studio for Bjerk
+
+Sanity Studio for Bjerk
