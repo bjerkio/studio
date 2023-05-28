@@ -6,10 +6,10 @@ export const privacyOptions = defineType({
   title: 'Privacy options',
   fields: [
     {
-      name: 'showPublicly',
+      name: 'hideName',
       type: 'boolean',
-      title: 'Show publicly / anonymize',
-      initialValue: false,
+      title: 'Hide name / anonymize',
+      initialValue: true,
       validation: Rule => Rule.required(),
     },
     {
