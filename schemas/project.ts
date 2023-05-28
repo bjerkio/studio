@@ -47,13 +47,6 @@ export const project = defineType({
       initialValue: 'en',
     },
     {
-      name: 'privacy',
-      type: 'privacy-options',
-      title: 'Personvern',
-      fieldset: 'metadata',
-      validation: Rule => Rule.required(),
-    },
-    {
       name: 'description',
       title: 'Description',
       description:
