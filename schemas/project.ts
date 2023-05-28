@@ -95,6 +95,12 @@ export const project = defineType({
       rows: 4,
     },
     {
+      name: 'technologies',
+      title: 'Technologies',
+      type: 'array',
+      of: [{ type: 'reference', to: [{ type: 'technology' }] }],
+    },
+    {
       name: 'body',
       title: 'Body',
       type: 'blockContent',
