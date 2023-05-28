@@ -12,5 +12,11 @@ export const privacyOptions = defineType({
       initialValue: false,
       validation: Rule => Rule.required(),
     },
+    {
+      name: 'anonymizedName',
+      type: 'string',
+      title: 'Anonymized name',
+      description: 'Name to show publicly if the user has chosen to anonymize',
+    },
   ],
 });
