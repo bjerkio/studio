@@ -1,4 +1,5 @@
 import { address } from './objects/address';
+import { basicBlockContent } from './objects/basic-block-content';
 import { blockContent } from './objects/block-content';
 import { link } from './objects/link';
 import { privacyOptions } from './objects/privacy-options';
@@ -14,6 +15,7 @@ export const schemaTypes = [
   address,
   link,
   technology,
+  basicBlockContent,
   blockContent,
   privacyOptions,
 ];

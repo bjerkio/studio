@@ -7,11 +7,12 @@ export const project = defineType({
   title: 'Project',
   icon: HiBolt,
   type: 'document',
+  groups: [
+    { name: 'basic', title: 'Basic', default: true },
+    { name: 'extended', title: 'Extended' },
+    { name: 'metadata', title: 'Metadata' },
+  ],
   fieldsets: [
-    {
-      name: 'metadata',
-      options: { columns: 2 },
-    },
     {
       name: 'date',
       description:
@@ -23,13 +24,22 @@ export const project = defineType({
     {
       name: 'name',
       title: 'Name',
+      group: 'basic',
       type: 'string',
       validation: Rule => Rule.required(),
+    },
+    {
+      name: 'title',
+      title: 'Title',
+      description: 'Title of the project. Leave blank to use the name.',
+      group: 'extended',
+      type: 'string',
     },
     {
       name: 'slug',
       title: 'Slug',
       type: 'slug',
+      group: 'metadata',
       validation: Rule => Rule.required(),
       options: {
         source: 'name',
@@ -37,30 +47,9 @@ export const project = defineType({
       },
     },
     {
-      title: 'Language',
-      type: 'string',
-      name: 'language',
-      fieldset: 'metadata',
-      options: {
-        list: languages,
-      },
-      initialValue: 'en',
-    },
-    {
-      name: 'description',
-      title: 'Description',
-      description:
-        'Short introduction of the project. Try to include mission, vision, goals and results.',
-      type: 'text',
-      rows: 3,
-      validation: Rule => Rule.max(200).required(),
-      options: {
-        maxLength: 200,
-      },
-    },
-    {
       name: 'customer',
       title: 'Customer',
+      group: 'basic',
       type: 'reference',
       to: [{ type: 'organization' }],
       validation: Rule => Rule.required(),
@@ -69,6 +58,7 @@ export const project = defineType({
       name: 'yearFrom',
       title: 'From',
       type: 'number',
+      group: 'basic',
       fieldset: 'date',
       validation: Rule => Rule.required(),
       // default to current year
@@ -77,8 +67,53 @@ export const project = defineType({
     {
       name: 'yearTo',
       fieldset: 'date',
+      group: 'basic',
       title: 'To',
       type: 'number',
+    },
+    {
+      title: 'Language',
+      type: 'string',
+      name: 'language',
+      group: 'metadata',
+      validation: Rule => Rule.required(),
+      options: {
+        list: languages,
+      },
+    },
+    {
+      name: 'description',
+      title: 'Description',
+      group: 'basic',
+      description: `
+        Short introduction of the project. Try to include mission, vision, goals and results.
+        Used in project lists and search results.
+        `,
+      type: 'text',
+      rows: 3,
+      validation: Rule => Rule.max(300).required(),
+      options: {
+        maxLength: 300,
+      },
+    },
+    {
+      name: 'preamble',
+      description: `
+        Short introduction of the project.
+        
+        Note: Preamble is required to generate a single
+        page for the project on the website.
+        `,
+      title: 'Preamble',
+      group: 'extended',
+      type: 'basicBlockContent',
+    },
+    {
+      name: 'mission',
+      title: 'Mission Statement',
+      group: 'extended',
+      type: 'text',
+      rows: 4,
     },
     {
       name: 'image',
@@ -89,25 +124,22 @@ export const project = defineType({
       },
     },
     {
-      name: 'mission',
-      title: 'Mission Statement',
-      type: 'text',
-      rows: 4,
-    },
-    {
       name: 'technologies',
       title: 'Technologies',
+      group: 'metadata',
       type: 'array',
       of: [{ type: 'reference', to: [{ type: 'technology' }] }],
     },
     {
       name: 'body',
       title: 'Body',
+      group: 'extended',
       type: 'blockContent',
     },
     {
       name: 'links',
       type: 'array',
+      group: 'metadata',
       title: 'Links',
       of: [{ type: 'link' }],
     },

@@ -1,7 +1,7 @@
 import { defineType } from 'sanity';
 
-export const blockContent = defineType({
-  name: 'blockContent',
+export const basicBlockContent = defineType({
+  name: 'basicBlockContent',
   title: 'Body',
   type: 'array',
   of: [
@@ -36,26 +36,6 @@ export const blockContent = defineType({
             ],
           },
         ],
-      },
-    },
-    {
-      type: 'image',
-      fields: [
-        {
-          name: 'alt',
-          type: 'string',
-          title: 'Alternative text',
-          description: 'Important for SEO and accessiblity.',
-          validation: Rule => Rule.required(),
-        },
-        {
-          name: 'caption',
-          type: 'string',
-          title: 'Caption',
-        },
-      ],
-      options: {
-        hotspot: true,
       },
     },
   ],
