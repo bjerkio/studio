@@ -27,11 +27,11 @@
   "devDependencies": {
     "@bjerk/eslint-config": "^4.0.0",
     "@sanity/eslint-config-studio": "^2.0.1",
-    "@simenandre/prettier": "^4.0.0",
+    "@simenandre/prettier": "^4.0.1",
     "@types/react": "^18.0.37",
     "@types/styled-components": "^5.1.26",
     "eslint": "^8.38.0",
-    "prettier": "^2.8.7",
+    "prettier": "^2.8.8",
     "typescript": "^5.0.4"
   },
   "keywords": [

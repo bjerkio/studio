@@ -38,9 +38,9 @@ export const project = defineType({
     {
       name: 'slug',
       title: 'Slug',
+      description: 'The slug is used to generate the page URL',
       type: 'slug',
       group: 'metadata',
-      validation: Rule => Rule.required(),
       options: {
         source: 'name',
         maxLength: 96,
@@ -98,12 +98,7 @@ export const project = defineType({
     },
     {
       name: 'preamble',
-      description: `
-        Short introduction of the project.
-        
-        Note: Preamble is required to generate a single
-        page for the project on the website.
-        `,
+      description: 'Short introduction of the project.',
       title: 'Preamble',
       group: 'extended',
       type: 'basicBlockContent',
@@ -142,6 +137,12 @@ export const project = defineType({
       group: 'metadata',
       title: 'Links',
       of: [{ type: 'link' }],
+    },
+    {
+      name: 'seo',
+      title: 'SEO',
+      group: 'metadata',
+      type: 'seo',
     },
   ],
   preview: {
