@@ -1,9 +1,8 @@
 module.exports = {
-  extends: ['@bjerk/eslint-config', 'plugin:jest/recommended'],
-  plugins: ['jest'],
+  extends: ['@bjerk/eslint-config', '@sanity/eslint-config-studio'],
   overrides: [
     {
-      files: 'jest.config.*',
+      files: ['sanity.*.ts'],
       rules: {
         'import/no-default-export': 'off',
       },
