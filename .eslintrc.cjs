@@ -1,5 +1,6 @@
 module.exports = {
-  extends: ['@bjerk/eslint-config', '@sanity/eslint-config-studio'],
+  root: true,
+  extends: ['@bjerk/eslint-config'],
   overrides: [
     {
       files: ['sanity.*.ts'],

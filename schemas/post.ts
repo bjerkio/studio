@@ -58,10 +58,9 @@ export const post = defineType({
   preview: {
     select: {
       title: 'title',
-
       media: 'mainImage',
     },
-    prepare(selection) {
+    prepare(selection: Record<'title' | 'media', string>) {
       const { title, media } = selection;
       return {
         title,
