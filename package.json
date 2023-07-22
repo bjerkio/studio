@@ -1,6 +1,6 @@
 {
   "private": true,
-  "name": "flexisoft-portal",
+  "name": "@bjerk/studio",
   "version": "1.0.0",
   "license": "UNLICENSED",
   "main": "package.json",
