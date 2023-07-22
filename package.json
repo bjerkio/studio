@@ -25,7 +25,7 @@
     "styled-components": "^6.0.0"
   },
   "devDependencies": {
-    "@bjerk/eslint-config": "^4.0.0",
+    "@bjerk/eslint-config": "^5.0.0",
     "@sanity/eslint-config-studio": "^2.0.1",
     "@simenandre/prettier": "^5.0.0",
     "@types/react": "^18.0.37",
