@@ -1,17 +1,17 @@
 import { defineType } from 'sanity';
 
 export const Metadata = defineType({
-  name: 'Metadata',
+  name: 'metadata',
   title: 'Metadata',
   type: 'object',
   fields: [
     {
-        name: 'SearchEngine',
+        name: 'searchEngine',
         type: 'searchEngine',
         validation: (Rule: { required: () => any; }) => Rule.required(),
     },
     {
-        name: 'Socialmedia',
+        name: 'socialMedia',
         type: 'socialMedia',
         validation: (Rule: { required: () => any; }) => Rule.required(),
     },
