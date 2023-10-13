@@ -8,12 +8,12 @@ export const Metadata = defineType({
     {
       name: 'searchEngine',
       type: 'searchEngine',
-      validation: (Rule: { required: () => any }) => Rule.required(),
+      validation: Rule => Rule.required(),
     },
     {
       name: 'socialMedia',
       type: 'socialMedia',
-      validation: (Rule: { required: () => any }) => Rule.required(),
+      validation: Rule => Rule.required(),
     },
   ],
 });
