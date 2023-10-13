@@ -2,7 +2,7 @@ import { address } from './objects/address';
 import { basicBlockContent } from './objects/basic-block-content';
 import { blockContent } from './objects/block-content';
 import { link } from './objects/link';
-import { Metadata, searchEngine, socialMedia } from './objects/meta-data';
+import { metadata, searchEngine, socialMedia } from './objects/meta-data';
 import { privacyOptions } from './objects/privacy-options';
 import { seo } from './objects/seo';
 import { organization } from './organization';
@@ -21,7 +21,7 @@ export const schemaTypes = [
   basicBlockContent,
   blockContent,
   privacyOptions,
-  Metadata,
+  metadata,
   searchEngine,
   socialMedia,
 ];

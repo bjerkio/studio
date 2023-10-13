@@ -145,10 +145,10 @@ export const project = defineType({
       type: 'seo',
     },
     {
-      name: 'Metadata',
-      title: 'Meta data',
+      name: 'metadata',
+      title: 'Metadata',
       group: 'metadata',
-      type: 'Metadata',
+      type: 'metadata',
     },
   ],
   preview: {

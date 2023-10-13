@@ -1,6 +1,6 @@
 import { defineType } from 'sanity';
 
-export const Metadata = defineType({
+export const metadata = defineType({
   name: 'metadata',
   title: 'Metadata',
   type: 'object',
