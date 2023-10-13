@@ -139,6 +139,12 @@ export const project = defineType({
       of: [{ type: 'link' }],
     },
     {
+      name: 'seo',
+      title: 'SEO',
+      group: 'metadata',
+      type: 'seo',
+    },
+    {
       name: 'Metadata',
       title: 'Meta data',
       group: 'metadata',
