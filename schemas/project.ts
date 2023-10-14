@@ -1,6 +1,5 @@
 import { HiBolt } from 'react-icons/hi2';
 import { defineType } from 'sanity';
-import { languages } from '../languages';
 
 export const project = defineType({
   name: 'project',
@@ -27,6 +26,15 @@ export const project = defineType({
       group: 'basic',
       type: 'string',
       validation: Rule => Rule.required(),
+    },
+    {
+      name: 'image',
+      title: 'Image',
+      type: 'image',
+      group: 'basic',
+      options: {
+        hotspot: true,
+      },
     },
     {
       name: 'title',
@@ -76,10 +84,8 @@ export const project = defineType({
       type: 'string',
       name: 'language',
       group: 'metadata',
-      validation: Rule => Rule.required(),
-      options: {
-        list: languages,
-      },
+      readOnly: true,
+      hidden: true,
     },
     {
       name: 'description',
@@ -111,14 +117,6 @@ export const project = defineType({
       rows: 4,
     },
     {
-      name: 'image',
-      title: 'Image',
-      type: 'image',
-      options: {
-        hotspot: true,
-      },
-    },
-    {
       name: 'technologies',
       title: 'Technologies',
       group: 'metadata',
@@ -137,12 +135,6 @@ export const project = defineType({
       group: 'metadata',
       title: 'Links',
       of: [{ type: 'link' }],
-    },
-    {
-      name: 'seo',
-      title: 'SEO',
-      group: 'metadata',
-      type: 'seo',
     },
     {
       name: 'metadata',

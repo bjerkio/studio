@@ -26,14 +26,17 @@ export const searchEngine = defineType({
     {
       name: 'Title',
       type: 'string',
+      validation: Rule => Rule.min(20).max(155),
       description:
-        'search engine title. The ideal length is 50–60 characters. When exceeding this limit, search engines will truncate the title.',
+        'The ideal length is 50 – 60 characters. When exceeding this limit, search engines will truncate the title.',
     },
     {
       name: 'Description',
-      type: 'string',
+      type: 'text',
+      rows: 3,
+      validation: Rule => Rule.min(70).max(250),
       description:
-        'search engine description. minimum length is 70 characters, and ideal is between 70 to 155 characters. When exceeding this limit, search engines will truncate the description.',
+        'Minimum length is 70 characters, and ideal is between 70 to 155 characters. When exceeding this limit, search engines will truncate the description.',
     },
   ],
 });
@@ -51,9 +54,9 @@ export const socialMedia = defineType({
     },
     {
       name: 'Description',
-      type: 'string',
-      description:
-        'social media description. Shuold not exceed 85 characters to fit most platforms.',
+      type: 'text',
+      rows: 2,
+      validation: Rule => Rule.min(100).max(250),
     },
     {
       name: 'Images',
