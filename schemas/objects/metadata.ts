@@ -8,12 +8,10 @@ export const metadata = defineType({
     {
       name: 'searchEngine',
       type: 'searchEngine',
-      validation: Rule => Rule.required(),
     },
     {
       name: 'socialMedia',
       type: 'socialMedia',
-      validation: Rule => Rule.required(),
     },
   ],
 });
@@ -24,14 +22,14 @@ export const searchEngine = defineType({
   type: 'object',
   fields: [
     {
-      name: 'Title',
+      name: 'title',
       type: 'string',
       validation: Rule => Rule.min(20).max(155),
       description:
         'The ideal length is 50 – 60 characters. When exceeding this limit, search engines will truncate the title.',
     },
     {
-      name: 'Description',
+      name: 'description',
       type: 'text',
       rows: 3,
       validation: Rule => Rule.min(70).max(250),
@@ -47,19 +45,19 @@ export const socialMedia = defineType({
   type: 'object',
   fields: [
     {
-      name: 'Title',
+      name: 'title',
       type: 'string',
       description:
         'social media title. The ideal length is 47 characters. When exceeding this limit, social media will truncate the title. Linkedin will truncate the title at 119 characters.',
     },
     {
-      name: 'Description',
+      name: 'description',
       type: 'text',
       rows: 2,
       validation: Rule => Rule.min(100).max(250),
     },
     {
-      name: 'Images',
+      name: 'images',
       type: 'array',
       of: [{ type: 'image' }],
       description:
