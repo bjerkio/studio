@@ -63,7 +63,7 @@ export const socialMedia = defineType({
       type: 'array',
       of: [{ type: 'image' }],
       description:
-        'social media image. The ideal size is 1200 x 630 pixels. When proviing multiple images, the first will be used as the main image. Some platforms will allow user to choose which image to use.',
+        'The ideal size is 1200 x 630 pixels. When proviing multiple images, the first will be used as the main image. Some platforms will allow user to choose which image to use.',
     },
   ],
 });
