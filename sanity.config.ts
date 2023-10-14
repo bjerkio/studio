@@ -1,7 +1,7 @@
+import { documentInternationalization } from '@sanity/document-internationalization';
 import { visionTool } from '@sanity/vision';
 import { defineConfig } from 'sanity';
 import { deskTool } from 'sanity/desk';
-import { documentInternationalization } from '@sanity/document-internationalization';
 import { schemaTypes } from './schemas';
 
 export default defineConfig({
