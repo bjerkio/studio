@@ -37,6 +37,6 @@
   "keywords": [
     "sanity"
   ],
-  "packageManager": "pnpm@8.10.1",
+  "packageManager": "pnpm@8.10.2",
   "prettier": "@simenandre/prettier"
 }
